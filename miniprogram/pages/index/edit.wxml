@@ -1,0 +1,67 @@
+<!--miniprogram/pages/index/edit.wxml-->
+<text>请计分...</text>
+<scroll-view class="editcontainer" scroll-y="true">
+  <!--头像栏-->
+    <view wx:for="{{name}}" wx:for-index="idx" wx:key="item"> 
+      <view class="rows">
+
+        <view class="columns">
+          <view 
+            class="userinfo-avatar"
+            style="background-image: url({{avatar[idx]}})"         
+          >
+          </view>
+          <view class="userinfo-name">{{name[idx]}}</view>
+        </view>
+
+        <view class="columns" animation="{{ani[idx]}}">
+          <view class="getscore">{{getscore[idx]}}</view>
+        </view>
+
+        <view wx:if="{{inroom[idx]}}" class='rows'>
+          <view wx:for="{{imagepath}}" wx:for-index="idx1" wx:key="item">
+          <view class="columns">
+            <view hover-class="hover">
+            <image           
+              class="buttonview"
+              src="{{item[0]}}"
+              bindtap="plus"
+              data-player="{{idx}}"
+              data-point="{{idx1}}"
+              data-dir="+"
+                       
+            >
+            </image>
+            </view>
+
+            <view hover-class="hover">
+            <image 
+              class="buttonview"
+              src="{{item[1]}}"
+              bindtap="plus"
+              data-player="{{idx}}"
+              data-point="{{idx1}}"
+              data-dir="-"
+                        
+            >
+            </image>
+            </view>
+          </view>
+          </view>
+        </view>
+
+      </view>
+    </view> 
+</scroll-view>
+
+<view class="rows1">
+  <view class="buttonsave" bindtap="savescore" hover-class="hover" >
+    <view class="savetext">保存</view>
+  </view>
+  
+  <switch class="swbtn" checked="{{switch1Checked}}" bindchange="switch1Change" color="#b7ae8f"></switch>
+  <text class="swtext">零和计分</text>
+  
+</view>
+
+  

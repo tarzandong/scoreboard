@@ -1,0 +1,14 @@
+/* miniprogram/pages/index/quit.wxss */
+
+.quitbtn {
+  background-color: #475164;
+  color: white;
+  height: 40px;
+  width: 100px;
+  position: fixed;
+  bottom: 2px;
+  align-self: center;
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px;
+}

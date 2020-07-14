@@ -1,0 +1,168 @@
+<!--index.wxml-->
+
+
+<view class="container" scroll-x="true">
+  
+    <!--头像栏-->
+    <view class="rows" >
+      <view class="columns" wx:for="{{name}}" wx:for-index="idx" wx:key="item">
+        
+          <view 
+            class="userinfo-avatar"
+            style="background-image: url({{avatar[idx]}})"         
+          >
+
+            
+  
+          </view>
+
+
+          <view class="userinfo-name" >{{name[idx]}}</view>
+          <view class="btn" wx:if="{{owner && idx!==pos && inroom[idx]}}" bindtap="swowner" data-index="{{idx}}" hover-class="hover">移交管理</view>
+        
+      </view>
+      
+    </view>
+     
+  
+  <view class="line"/>
+  <view class="line1"/>
+  <button wx:if="{{loged==false}}"
+        open-type="getUserInfo" 
+        bindgetuserinfo="onGetUserInfo"
+        size="mini"
+      > 
+        {{promt}} 
+  </button>
+ 
+  <!--积分栏-->
+  
+  <scroll-view
+    wx:if="{{loged}}"
+    class="table" 
+    scroll-y="true"
+    scroll-top="{{scrolvalue}}"
+    
+    scroll-into-view="tableend"
+    style="height:{{keyheight>1? 40:65}}vh"
+    
+  >
+    
+    <view wx:for="{{scoretable}}" >
+      <view class="tr" >
+        <view class="td1" wx:for="{{item}}" wx:for-index="idx" wx:for-item="it" wx:key="it">
+          <view class="td0" wx:if="{{idx==pos}}">
+            <view class="td">{{it}} 
+            </view>
+          </view>
+          <view class="td"  wx:else> {{it}} </view>
+        </view>
+
+      
+      </view>
+    </view>
+    <!-- <view class="endline" id="tableend" /> -->
+    <view class="line"  />
+    <view class="line1"/>
+    <view>当前积分↗</view>
+
+    <view class="tr" wx:if="{{noting || keyboard}}" >
+    <view class="td" wx:for="{{scoretable[0]}}" wx:for-index="idx1" wx:key="item">
+      <input class="input1" wx:if="{{owner || keyboard}}"         
+        bindinput="getinput" data-index="{{idx1}}" focus="{{keyboard}}">      
+      </input>
+    </view>
+    
+    </view> 
+  </scroll-view>
+
+  
+    
+  
+  
+  
+
+  <!--底部按钮栏-->
+  
+  <view class="bot" wx:if="{{loged}}" >
+    
+      <view  class="bcontainer">
+            <view class="box" bindtap="reflash" hover-class="hover">
+                <image class="img" src="/images/reflash1.jpg" >
+                    
+                </image>
+               <p>刷新</p>
+            </view>
+            <view class="box" wx:if="{{owner}}" bindtap="editscore" hover-class="hover">
+                <image class="img" src="/images/edit1.jpg">
+                    
+                </image>
+                <p>计分</p>
+            </view>
+            <view class="box" wx:if="{{owner}}" bindtap="notesw" hover-class="hover">
+                <image class="img" src="/images/note.jpg">
+                    
+                </image>
+                <p wx:if="{{noting}}">隐藏备注</p>
+                <p wx:else>添加备注</p>
+            </view>
+            <view class="box" wx:if="{{owner}}" wx:if="{{noting}}" bindtap="check" hover-class="hover">
+                <image class="img" src="/images/check1.jpg">
+                    
+                </image>
+                <p wx:if="{{noting}}">备注取平</p>
+            </view>
+            
+            <view class="box1" wx:if="{{owner}}" bindtap="dismiss" hover-class="hover">
+                <image class="img1" src="/images/clear1.jpg">
+                    
+                </image>
+                <p1>解散房间</p1>
+            </view>
+            <view class="box1" wx:else bindtap="quitroom" hover-class="hover">
+                <image class="img1" src="/images/quit1.jpg">
+                    
+                </image>
+                <p1>退出房间</p1>
+            </view>
+
+            <view  class="box1" hover-class="hover">
+                
+              <image class="img1" src="/images/share.jpg">
+                
+                <button open-type="share" class="bshare" plain="true"> invite</button>
+                   
+              </image>   
+               
+                
+               <p1>邀请成员</p1>
+            </view>
+            
+            
+            
+
+            
+            
+        </view>
+
+    
+    
+  </view>
+  
+
+
+
+
+
+  
+    
+   
+  
+
+</view>
+
+
+  
+
+
+ 

@@ -1,0 +1,46 @@
+/**app.wxss**/
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 90vh;
+  box-sizing: border-box;
+}
+
+.banner{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 100vw;
+  
+}
+
+.rows {
+  background-color: #475164;
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  width: 100vw;
+  margin-top: 5rpx;
+}
+
+
+
+
+
+
+
+page {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+
+
+
+/*.userinfo-avatar:after {
+  border: none;
+}*/
+

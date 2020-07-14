@@ -1,0 +1,6 @@
+<!--miniprogram/pages/index/quit.wxml-->
+
+  <navigator  class="quitbtn" open-type="exit" target="miniProgram">关闭小程序</navigator>
+
+
+  

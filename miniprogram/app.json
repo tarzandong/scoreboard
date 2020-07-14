@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/edit",
+    "pages/index/quit"
+  ],
+  "window": {
+    "backgroundColor": "#f9f4dc",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f9f4dc",
+    "navigationBarTitleText": "积分看板",
+    "navigationBarTextStyle": "black",
+    "pageOrientation": "portrait"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

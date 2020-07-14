@@ -1,0 +1,146 @@
+/* miniprogram/pages/index/edit.wxss */
+/**index.wxss**/
+
+page {
+  background: #f9f4dc;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.editcontainer {
+  flex-direction: column;
+  align-items: center;
+  height: 600px;
+  box-sizing: border-box;
+}
+
+.userinfo-avatar{
+  width: 80%;
+  /*background-color: darkgrey;*/
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  align-items: center;
+  background-size: 100%;
+  transition: all 300ms ease;
+}
+.userinfo-avatar:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+
+
+
+.userinfo-name{
+  font-size: 16rpx;
+  text-align: center;
+  background-color: rgb(0,0,0,0) ;
+  color: #fff;
+  margin-bottom: 20rpx;
+  
+}
+
+.rows1 {
+  background-color: #475164;
+  position: fixed;
+  bottom: 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: left;
+  width: 100vw;
+  border-top: 1px solid #f9f4dc;
+}
+
+.columns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 15vw;
+  height: flex;
+  
+}
+
+.getscore{
+  margin-top: 80rpx;
+  color: #fff;
+}
+
+
+
+
+.buttonview{
+  width: 80rpx;
+  height: 80rpx;
+  /*background-color: darkgrey;*/
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  
+  display: flex;
+  flex-direction: row;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  align-items: center;
+  background-size: 100%;
+  
+  
+}
+
+.buttonview:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+
+}
+
+.buttonsave{
+  width: 100rpx;
+  height: 60rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  margin-left: 25%;
+  margin-right: 25%;
+  background-color: #b7ae8f;
+  border-radius: 10%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  display: flex;
+}
+
+.hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.savetext{
+  align-self: center;
+}
+
+
+.swbtn{
+  width: 100rpx;
+  align-self: center;
+}
+.swtext{
+  color: #fff;
+  align-self: center;
+  font-size: 26rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
